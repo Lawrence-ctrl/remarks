@@ -1,0 +1,18 @@
+//broadcast 
+Broadcast::routes(['middleware' => ['auth:api']]);
+
+//delete multiple files
+use File;
+
+$images = explode(",", $vehicles->images);
+
+foreach($images as $image){
+
+   $image_path = public_path().'/images/'.$image;
+
+   if(File::exists($image_path)) {
+    File::delete($image_path);
+   }
+}
+//
+https://medium.com/@pran.81/how-to-implement-laravels-must-verify-email-feature-in-the-api-registration-b531608ecb99
