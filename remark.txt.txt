@@ -5,6 +5,7 @@ loading
 
 //zero zero
 <select class="form-control qb-custom-select-tar d-inline-block" name="open_hour" style="width: 70px;">
+//making hour
     @for($i = 0; $i < 24; $i++)
     <option value="{{$i}}"
     @if(old('open_hour', $application_form->open_hour ?? null) == $i) 
@@ -13,5 +14,18 @@ loading
     {{sprintf("%02d", $i)}}
     </option>
     @endfor
-                                    </select>
+</select>
+//making minutes
+<div class="qb-custom-select" style="margin-left: 7px;">
+   <select class="form-control qb-custom-select-tar d-inline-block" name="end_minute" style="width: 70px;">
+     @for($i = 0; $i < 60; $i+=10)
+     <option value="{{$i}}"
+     @if(old('end_minute', $application_form->end_minute ?? null)  == $i )
+     selected="selected" @endif
+     >
+     {{sprintf("%02d", $i)}}
+     </option>
+     @endfor
+  </select>
+</div>
 {{sprintf("%02d", $i)}} = to make "00";
