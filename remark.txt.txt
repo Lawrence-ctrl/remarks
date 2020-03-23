@@ -4,4 +4,14 @@ reservation
 loading
 
 //zero zero
+<select class="form-control qb-custom-select-tar d-inline-block" name="open_hour" style="width: 70px;">
+    @for($i = 0; $i < 24; $i++)
+    <option value="{{$i}}"
+    @if(old('open_hour', $application_form->open_hour ?? null) == $i) 
+    selected="selected" @endif
+    >
+    {{sprintf("%02d", $i)}}
+    </option>
+    @endfor
+                                    </select>
 {{sprintf("%02d", $i)}} = to make "00";
