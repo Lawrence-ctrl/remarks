@@ -2,3 +2,6 @@ https://medium.com/@pran.81/how-to-implement-laravels-must-verify-email-feature-
 reservation
 2 languages
 loading
+
+
+{{sprintf("%02d", $i)}} = to make "00" //zero zero
