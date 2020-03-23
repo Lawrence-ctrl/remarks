@@ -3,5 +3,5 @@ reservation
 2 languages
 loading
 
-
-{{sprintf("%02d", $i)}} = to make "00" //zero zero
+//zero zero
+{{sprintf("%02d", $i)}} = to make "00";
